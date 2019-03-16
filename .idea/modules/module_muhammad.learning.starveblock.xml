@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_muhammad.learning.starveblock" default="compile.module.muhammad.learning.starveblock">
+  <dirname property="module.muhammad.learning.starveblock.basedir" file="${ant.file.module_muhammad.learning.starveblock}"/>
+  
+  <property name="module.jdk.home.muhammad.learning.starveblock" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.muhammad.learning.starveblock" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.muhammad.learning.starveblock" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.muhammad.learning.starveblock" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="muhammad.learning.starveblock.output.dir" value="${module.muhammad.learning.starveblock.basedir}/../../out/production/muhammad.learning.StarveBlock"/>
+  <property name="muhammad.learning.starveblock.testoutput.dir" value="${module.muhammad.learning.starveblock.basedir}/../../out/test/muhammad.learning.StarveBlock"/>
+  
+  <path id="muhammad.learning.starveblock.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="muhammad.learning.starveblock.module.production.classpath">
+    <path refid="${module.jdk.classpath.muhammad.learning.starveblock}"/>
+  </path>
+  
+  <path id="muhammad.learning.starveblock.runtime.production.module.classpath">
+    <pathelement location="${muhammad.learning.starveblock.output.dir}"/>
+  </path>
+  
+  <path id="muhammad.learning.starveblock.module.classpath">
+    <path refid="${module.jdk.classpath.muhammad.learning.starveblock}"/>
+    <pathelement location="${muhammad.learning.starveblock.output.dir}"/>
+  </path>
+  
+  <path id="muhammad.learning.starveblock.runtime.module.classpath">
+    <pathelement location="${muhammad.learning.starveblock.testoutput.dir}"/>
+    <pathelement location="${muhammad.learning.starveblock.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.muhammad.learning.starveblock">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.muhammad.learning.starveblock">
+    <patternset refid="excluded.from.module.muhammad.learning.starveblock"/>
+  </patternset>
+  
+  
+  <target name="compile.module.muhammad.learning.starveblock" depends="compile.module.muhammad.learning.starveblock.production,compile.module.muhammad.learning.starveblock.tests" description="Compile module muhammad.learning.StarveBlock"/>
+  
+  <target name="compile.module.muhammad.learning.starveblock.production" depends="register.custom.compilers" description="Compile module muhammad.learning.StarveBlock; production classes"/>
+  
+  <target name="compile.module.muhammad.learning.starveblock.tests" depends="register.custom.compilers,compile.module.muhammad.learning.starveblock.production" description="compile module muhammad.learning.StarveBlock; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.muhammad.learning.starveblock" description="cleanup module">
+    <delete dir="${muhammad.learning.starveblock.output.dir}"/>
+    <delete dir="${muhammad.learning.starveblock.testoutput.dir}"/>
+  </target>
+</project>

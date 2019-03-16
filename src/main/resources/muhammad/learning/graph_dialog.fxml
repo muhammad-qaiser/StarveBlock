@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import muhammad.learning.GanttChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="muhammad.learning.GenerateChart">
+   <children>
+      <Button fx:id="test"></Button>
+      <GanttChart fx:id="mChart" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <xAxis>
+            <NumberAxis fx:id="xAxis"></NumberAxis>
+         </xAxis>
+         <yAxis>
+            <CategoryAxis fx:id="yAxis"></CategoryAxis>
+         </yAxis>
+      </GanttChart>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000080b2" height="15.0" layoutX="229.0" layoutY="534.0" stroke="BLACK" strokeType="INSIDE" width="16.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#800000b2" height="15.0" layoutX="328.0" layoutY="534.0" stroke="BLACK" strokeType="INSIDE" width="16.0" />
+      <Label layoutX="262.0" layoutY="533.0" text="Starved" />
+      <Label layoutX="368.0" layoutY="533.0" text="Blocked" />
+   </children>
+</AnchorPane>

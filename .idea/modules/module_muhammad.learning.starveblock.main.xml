@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_muhammad.learning.starveblock.main" default="compile.module.muhammad.learning.starveblock.main">
+  <dirname property="module.muhammad.learning.starveblock.main.basedir" file="${ant.file.module_muhammad.learning.starveblock.main}"/>
+  
+  <property name="module.jdk.home.muhammad.learning.starveblock.main" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.muhammad.learning.starveblock.main" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.muhammad.learning.starveblock.main" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.muhammad.learning.starveblock.main" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="muhammad.learning.starveblock.main.output.dir" value="${module.muhammad.learning.starveblock.main.basedir}/../../out/production/classes"/>
+  <property name="muhammad.learning.starveblock.main.testoutput.dir" value="${module.muhammad.learning.starveblock.main.basedir}/../../out/production/classes"/>
+  
+  <path id="muhammad.learning.starveblock.main.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="muhammad.learning.starveblock.main.module.production.classpath">
+    <path refid="${module.jdk.classpath.muhammad.learning.starveblock.main}"/>
+    <path refid="library.gradle:_org.apache.poi:poi-ooxml:4.0.1.classpath"/>
+    <path refid="library.gradle:_org.apache.poi:poi:4.0.1.classpath"/>
+    <path refid="library.gradle:_org.apache.poi:poi-ooxml-schemas:4.0.1.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-compress:1.18.classpath"/>
+    <path refid="library.gradle:_com.github.virtuald:curvesapi:1.05.classpath"/>
+    <path refid="library.gradle:_commons-codec:commons-codec:1.11.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-collections4:4.2.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-math3:3.6.1.classpath"/>
+    <path refid="library.gradle:_org.apache.xmlbeans:xmlbeans:3.0.2.classpath"/>
+  </path>
+  
+  <path id="muhammad.learning.starveblock.main.runtime.production.module.classpath">
+    <pathelement location="${muhammad.learning.starveblock.main.output.dir}"/>
+    <path refid="library.gradle:_org.apache.poi:poi-ooxml:4.0.1.classpath"/>
+    <path refid="library.gradle:_org.apache.poi:poi:4.0.1.classpath"/>
+    <path refid="library.gradle:_org.apache.poi:poi-ooxml-schemas:4.0.1.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-compress:1.18.classpath"/>
+    <path refid="library.gradle:_com.github.virtuald:curvesapi:1.05.classpath"/>
+    <path refid="library.gradle:_commons-codec:commons-codec:1.11.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-collections4:4.2.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-math3:3.6.1.classpath"/>
+    <path refid="library.gradle:_org.apache.xmlbeans:xmlbeans:3.0.2.classpath"/>
+  </path>
+  
+  <path id="muhammad.learning.starveblock.main.module.classpath">
+    <path refid="${module.jdk.classpath.muhammad.learning.starveblock.main}"/>
+    <pathelement location="${muhammad.learning.starveblock.main.output.dir}"/>
+    <path refid="library.gradle:_org.apache.poi:poi-ooxml:4.0.1.classpath"/>
+    <path refid="library.gradle:_org.apache.poi:poi:4.0.1.classpath"/>
+    <path refid="library.gradle:_org.apache.poi:poi-ooxml-schemas:4.0.1.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-compress:1.18.classpath"/>
+    <path refid="library.gradle:_com.github.virtuald:curvesapi:1.05.classpath"/>
+    <path refid="library.gradle:_commons-codec:commons-codec:1.11.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-collections4:4.2.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-math3:3.6.1.classpath"/>
+    <path refid="library.gradle:_org.apache.xmlbeans:xmlbeans:3.0.2.classpath"/>
+  </path>
+  
+  <path id="muhammad.learning.starveblock.main.runtime.module.classpath">
+    <pathelement location="${muhammad.learning.starveblock.main.output.dir}"/>
+    <path refid="library.gradle:_org.apache.poi:poi-ooxml:4.0.1.classpath"/>
+    <path refid="library.gradle:_org.apache.poi:poi:4.0.1.classpath"/>
+    <path refid="library.gradle:_org.apache.poi:poi-ooxml-schemas:4.0.1.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-compress:1.18.classpath"/>
+    <path refid="library.gradle:_com.github.virtuald:curvesapi:1.05.classpath"/>
+    <path refid="library.gradle:_commons-codec:commons-codec:1.11.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-collections4:4.2.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-math3:3.6.1.classpath"/>
+    <path refid="library.gradle:_org.apache.xmlbeans:xmlbeans:3.0.2.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.muhammad.learning.starveblock.main">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.muhammad.learning.starveblock.main">
+    <patternset refid="excluded.from.module.muhammad.learning.starveblock.main"/>
+  </patternset>
+  
+  <path id="muhammad.learning.starveblock.main.module.sourcepath">
+    <dirset dir="${module.muhammad.learning.starveblock.main.basedir}/../../src/main">
+      <include name="java"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.muhammad.learning.starveblock.main" depends="compile.module.muhammad.learning.starveblock.main.production,compile.module.muhammad.learning.starveblock.main.tests" description="Compile module muhammad.learning.StarveBlock.main"/>
+  
+  <target name="compile.module.muhammad.learning.starveblock.main.production" depends="register.custom.compilers" description="Compile module muhammad.learning.StarveBlock.main; production classes">
+    <mkdir dir="${muhammad.learning.starveblock.main.output.dir}"/>
+    <javac2 destdir="${muhammad.learning.starveblock.main.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.muhammad.learning.starveblock.main}/javac">
+      <compilerarg line="${compiler.args.muhammad.learning.starveblock.main}"/>
+      <bootclasspath refid="muhammad.learning.starveblock.main.module.bootclasspath"/>
+      <classpath refid="muhammad.learning.starveblock.main.module.production.classpath"/>
+      <src refid="muhammad.learning.starveblock.main.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.muhammad.learning.starveblock.main"/>
+    </javac2>
+    
+    <copy todir="${muhammad.learning.starveblock.main.output.dir}">
+      <fileset dir="${module.muhammad.learning.starveblock.main.basedir}/../../src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.muhammad.learning.starveblock.main.basedir}/../../src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.muhammad.learning.starveblock.main.tests" depends="register.custom.compilers,compile.module.muhammad.learning.starveblock.main.production" description="compile module muhammad.learning.StarveBlock.main; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.muhammad.learning.starveblock.main" description="cleanup module">
+    <delete dir="${muhammad.learning.starveblock.main.output.dir}"/>
+    <delete dir="${muhammad.learning.starveblock.main.testoutput.dir}"/>
+  </target>
+</project>
